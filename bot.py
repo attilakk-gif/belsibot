@@ -53,8 +53,8 @@ def ascolta(update, context):
     if update.message and update.message.text:
         testo = update.message.text.lower()
 
-        for trigger, risposte in TRIGGERS.items():
-            if trigger in testo:
+        for triggers, risposte in TRIGGERS.items():
+            if any(trigger in testo for trigger in triggers):
                 update.message.reply_text(random.choice(risposte))
                 return
 
