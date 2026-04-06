@@ -31,6 +31,9 @@ TRIGGERS = {
     "prova": [
         " ping "
     ],
+    "esperto": [
+        "beeeeeeeeeeehhhhhhh"
+    ],
 }
 def ascolta(update, context):
     if update.message and update.message.text:
