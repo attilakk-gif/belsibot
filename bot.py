@@ -11,9 +11,11 @@ TRIGGERS = {
         "vecchio rincoglionito"      
     ],
     "russi": [
-        "popolo di merde!",
-        "schiavi",
-        "pellai"        
+        "popolo di schiavi!",
+        "merde",
+        "pellai",
+        "devono soffrire",
+
     ],
     "fattura": [
         "ma c'aa fattura",
@@ -32,7 +34,19 @@ TRIGGERS = {
         " ping "
     ],
     "esperto": [
-        "beeeeeeeeeeehhhhhhh"
+        "beeeeeeeeeeehhhhhhh",
+        "quanta potenza!"
+    ],
+    "numeri": [
+        "numeri di hamas, in tunnel di hamas pieni di attori di hamas"
+    ],
+    "belsy": [
+        "beeeeeeeeeeehhhhhhh",
+        "eccolo!",
+        "quanta potenza!",
+        "è tutto, tutto degradato",
+        "fa fattura?"
+                
     ],
 }
 def ascolta(update, context):
