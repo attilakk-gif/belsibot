@@ -4,61 +4,60 @@ import random
 
 TOKEN = os.getenv("TOKEN")
 
-# Dizionario TRIGGER → LISTA DI RISPOSTE
+# Dizionario: TUPLA DI TRIGGER → LISTA DI RISPOSTE
 TRIGGERS = {
     ("bidet", "biden"): [
         "pagliaccio 🤡🤡🤡",
-        "vecchio rincoglionito"      
+        "vecchio rincoglionito"
     ],
-    "russi": [
+    ("russi", "russia"): [
         "popolo di schiavi!",
         "merde",
         "pellai",
         "devono soffrire",
-
     ],
-    "fattura": [
-        "ma c'aa fattura",
+    ("fattura",): [
+        "ma c'aa fattura"
     ],
-    "sara": [ 
+    ("sara",): [ 
         "posa codesti ciottoli e vieni vì"
     ],
-
-    "trump": [
+    ("trump",): [
         "🥰 💦💦"
+        "Trump è meglio di Kamala che è meglio di rintrobidet"
     ],
-    "bibi": [
+    ("bibi",): [
         "bibi mon amour"
-],
-    "prova": [
+    ],
+    ("prova",): [
         " ping "
     ],
-    "esperto": [
+    ("esperto",): [
         "beeeeeeeeeeehhhhhhh",
         "quanta potenza!"
     ],
-    "numeri": [
+    ("numeri",): [
         "numeri di hamas, in tunnel di hamas pieni di attori di hamas"
     ],
-    "belsy": [
+    ("belsy",): [
         "beeeeeeeeeeehhhhhhh",
         "eccolo!",
         "quanta potenza!",
         "è tutto, tutto degradato",
         "fa fattura?"
-                
     ],
 }
+
 def ascolta(update, context):
     if update.message and update.message.text:
         testo = update.message.text.lower()
 
         for triggers, risposte in TRIGGERS.items():
+            # Controlla se almeno uno dei trigger è nel testo
             if any(trigger in testo for trigger in triggers):
                 update.message.reply_text(random.choice(risposte))
                 return
 
-        
 
 def main():
     updater = Updater(TOKEN, use_context=True)
@@ -68,6 +67,7 @@ def main():
 
     updater.start_polling()
     updater.idle()
+
 
 if __name__ == "__main__":
     main()
