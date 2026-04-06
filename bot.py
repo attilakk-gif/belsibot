@@ -8,7 +8,8 @@ TOKEN = os.getenv("TOKEN")
 TRIGGERS = {
     ("bidet", "biden"): [
         "pagliaccio 🤡🤡🤡",
-        "vecchio rincoglionito"
+        "vecchio rincoglionito",
+        "rintrobidet"
     ],
     ("russi", "russia"): [
         "popolo di schiavi!",
@@ -44,8 +45,11 @@ TRIGGERS = {
         "eccolo!",
         "quanta potenza!",
         "è tutto, tutto degradato",
-        "fa fattura?"
+        "fa fattura?",
+        "ti frantumo le mucose",
+        ": sangue a ettolitri"
     ],
+
 }
 
 def ascolta(update, context):
