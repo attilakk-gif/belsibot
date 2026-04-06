@@ -6,7 +6,7 @@ TOKEN = os.getenv("TOKEN")
 
 # Dizionario TRIGGER → LISTA DI RISPOSTE
 TRIGGERS = {
-    "bidet": [
+    ("bidet", "biden"): [
         "pagliaccio 🤡🤡🤡",
         "vecchio rincoglionito"      
     ],
