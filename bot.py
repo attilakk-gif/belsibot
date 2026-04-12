@@ -71,3 +71,5 @@ def main():
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, ascolta))
     updater.start_polling()
     updater.idle()
+if __name__ == "__main__":
+    main()
